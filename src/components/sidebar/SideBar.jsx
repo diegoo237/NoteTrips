@@ -1,13 +1,14 @@
-import AppNav from "../components/navs/AppNav";
+import AppNav from "../../components/navs/AppNav";
 import styles from "./SideBar.module.css";
 import SideBarFooter from "./SideBarFooter";
-import Logo from "./Logo";
+import Logo from "../logo/Logo";
+import { Outlet } from "react-router";
 function SideBar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-      <p>List of cities</p>
+      <Outlet />
       <SideBarFooter />
     </div>
   );
